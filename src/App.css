@@ -1,0 +1,155 @@
+@font-face{
+    font-family: 'ScottFont';
+    src: url('./font/Fipps-Regular.otf')
+  }
+  @font-face{
+    font-family: 'Stats';
+    src: url('./font/Eurostile MN Extended Bold.ttf')
+  }
+
+
+
+body{
+    background: -webkit-linear-gradient(0deg, #6b1b12, #f14e23, #6b1b12);
+    background-size: 100% 100%; 
+}
+
+.logo{
+    width: 200px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.character-name{
+    font-family: 'Stats';
+    margin: 0;
+    padding: 0;  
+    transform: translateY(-3em);
+    display: none;
+
+}
+
+.character-box:active p {
+    display: block;
+    background-color: rgba(227,35,30,0.7);
+    color: white;
+    margin-top: .8em;
+    font-size: .55em;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding: .05em 0;
+  }
+
+.Logo-container{
+    display: flex;
+    justify-content: center;
+}
+
+.containerOne{
+    display: flex;
+    height: 350px;
+    margin-top: 5px;
+    width: 60%;
+    justify-content: space-around;
+    margin-left: 250px;
+}
+
+.containerOne p{
+    font-style: ScottFont;
+}
+
+.character-select{
+    display: flex;
+    bottom: 5px;
+    margin: auto;
+    flex-wrap: wrap;
+    width: 360px;
+}
+
+.tag{
+    background-color:#FFFFFF;;
+    padding: 8px 8px 8px 8px;
+    border-radius: 3px;
+    color: black;
+}
+
+.scott{
+    width: 300px;
+}
+
+.character-stats h2{
+-webkit-text-stroke: 2px black;
+font-family: ScottFont;
+-webkit-text-fill-color: white;
+}
+
+.character-box{
+    height: 90px;
+    filter: grayscale(1);
+    align-self: stretch;
+    cursor: pointer;
+    text-align: center;
+    width: 90px;
+    outline: 2px solid gray;
+}
+
+.character-box:active {
+    filter: grayscale(0);
+    outline: 2px solid yellow;
+    z-index: 99;
+    animation: flash 300ms linear;
+}
+/*  AVATARS */
+
+.avatar{
+    width: 90px;
+    height: 90px;
+}
+
+.tag {
+    font-size: 20px;
+    font-family: Stats;
+    text-transform: uppercase;
+    -webkit-text-stroke: 1px black;
+    margin-top: 20px;
+  }
+
+.stats{
+    padding: 10px 0;
+    display: flex;
+}
+
+.stats p{
+    margin-left: 10px;
+    font-family: Stats;
+    color: black;
+}
+
+.character-box.active {
+    filter: grayscale(0);
+    outline: 2px solid yellow;
+    z-index: 99;
+    animation: flash 300ms linear;
+
+}
+
+@keyframes flash {
+	0% {
+		filter:brightness(100%);
+	}
+	20% {
+		filter:brightness(150%);
+	}
+	40% {
+		filter:brightness(100%);
+	}
+	60% {
+		filter:brightness(150%);
+	}
+	80% {
+		filter:brightness(100%);
+	}
+	100% {
+		filter:brightness(150%);
+	}
+}
