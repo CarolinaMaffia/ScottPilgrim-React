@@ -91,8 +91,8 @@ export default class CharacterSelect extends Component {
     <div>
       <div className="containerOne">
               <div className="character-container">
-                 <img src={activeCharacter.largeImg} className="scott" alt="scottcharacter" />
-              </div>
+                 <img src={activeCharacter.largeImg} className="character-larg-image" alt="scott pilgrim character" />
+              </div>      
               <div className="character-stats">
                   <div className="name">
                       <h2>{activeCharacter.name}</h2>  
